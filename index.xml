@@ -6,7 +6,16 @@
     <description>Recent content on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 03 Aug 2021 14:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Aug 2021 16:04:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于hugo搭建个人博客平台</title>
+      <link>http://dianjiu.github.io/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Tue, 03 Aug 2021 16:04:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/</guid>
+      <description>演示地址 点九博客 - 点九先生的技术博客分享 基于hugo 搭建的博客系统 安装hugo win10 1 2 choco install hugo -confirm choco install hugo-extended -confirm mac 1 brew install hugo linux 1 brew install hugo 创建blog 1 hugo new site</description>
+    </item>
+    
     <item>
       <title>谈谈类和对象的关系</title>
       <link>http://dianjiu.github.io/post/%E8%B0%88%E8%B0%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
@@ -22,7 +31,7 @@
       <pubDate>Tue, 03 Aug 2021 11:34:52 +0800</pubDate>
       
       <guid>http://dianjiu.github.io/post/hello/</guid>
-      <description>你好世界 这是第一篇博客</description>
+      <description>你好世界 这是第一篇博客 aaa bbb ccc</description>
     </item>
     
     <item>

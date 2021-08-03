@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>其他分类 on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/categories/%E5%85%B6%E4%BB%96%E5%88%86%E7%B1%BB/</link>
+    <description>Recent content in 其他分类 on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 03 Aug 2021 16:04:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E5%85%B6%E4%BB%96%E5%88%86%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于hugo搭建个人博客平台</title>
+      <link>http://dianjiu.github.io/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Tue, 03 Aug 2021 16:04:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/</guid>
+      <description>演示地址 点九博客 - 点九先生的技术博客分享 基于hugo 搭建的博客系统 安装hugo win10 1 2 choco install hugo -confirm choco install hugo-extended -confirm mac 1 brew install hugo linux 1 brew install hugo 创建blog 1 hugo new site</description>
+    </item>
+    
+  </channel>
+</rss>
