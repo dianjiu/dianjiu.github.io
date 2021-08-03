@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/tags/nginx/</link>
+    <description>Recent content in Nginx on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 20 Jul 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx下载安装</title>
+      <link>http://dianjiu.github.io/post/nginx%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/nginx%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/</guid>
+      <description>一、简介 Nginx 是由俄罗斯人 Igor Sysoev 设计开发的，开发工作从2002 年开始，第一次公开发布在 2004 年 10 月 4 日。 官方网站为：http://nginx.org/</description>
+    </item>
+    
+    <item>
+      <title>Nginx部署服务</title>
+      <link>http://dianjiu.github.io/post/nginx%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/nginx%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</guid>
+      <description>一、查看配置 上一篇博客我们将 nginx 安装在 /usr/local/nginx 目录下，其默认的配置文件都放在这个目录的 conf 目录下，而主配置文件 nginx.conf 也在其中，后续部署应用时仅对 nginx 的配置文</description>
+    </item>
+    
+  </channel>
+</rss>

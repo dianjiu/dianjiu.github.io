@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>JMH代码微基准测试 - 点九博客 - 点九先生的技术博客分享</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="点九先生" /><meta name="description" content="JMH 简介 JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编" /><meta name="keywords" content="博客, 个人博客, 点九先生" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.86.1 with theme even" />
+
+
+<link rel="canonical" href="http://dianjiu.github.io/post/jmh/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="JMH代码微基准测试" />
+<meta property="og:description" content="JMH 简介 JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dianjiu.github.io/post/jmh/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-20T11:34:52+08:00" />
+<meta property="article:modified_time" content="2021-07-20T11:34:52+08:00" />
+
+<meta itemprop="name" content="JMH代码微基准测试">
+<meta itemprop="description" content="JMH 简介 JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编"><meta itemprop="datePublished" content="2021-07-20T11:34:52+08:00" />
+<meta itemprop="dateModified" content="2021-07-20T11:34:52+08:00" />
+<meta itemprop="wordCount" content="2041">
+<meta itemprop="keywords" content="JMH,Java,Spring,SpringBoot,SpringCloud,SpringCloud Alibaba," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JMH代码微基准测试"/>
+<meta name="twitter:description" content="JMH 简介 JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">点九博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">时间轴</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">点九博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">时间轴</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">JMH代码微基准测试</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-07-20 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#jmh-简介">JMH 简介</a></li>
+        <li><a href="#jmh使用">JMH使用</a>
+          <ul>
+            <li><a href="#21-引入依赖">2.1 引入依赖</a></li>
+            <li><a href="#22-测试代码">2.2 测试代码</a></li>
+            <li><a href="#23-执行测试">2.3 执行测试</a></li>
+          </ul>
+        </li>
+        <li><a href="#jmh-注解">JMH 注解</a>
+          <ul>
+            <li><a href="#benchmarkmode">@BenchmarkMode</a></li>
+            <li><a href="#state">@State</a></li>
+            <li><a href="#outputtimeunit">@OutputTimeUnit</a></li>
+            <li><a href="#warmup">@Warmup</a></li>
+            <li><a href="#measurement">@Measurement</a></li>
+            <li><a href="#threads">@Threads</a></li>
+            <li><a href="#fork">@Fork</a></li>
+            <li><a href="#param">@Param</a></li>
+          </ul>
+        </li>
+        <li><a href="#jmh-陷阱">JMH 陷阱</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="jmh-简介">JMH 简介</h2>
+<p>JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编写的，他们应该比任何人都了解 JIT 以及 JVM 对于基准测试的影响。</p>
+<p>当你定位到热点方法，希望进一步优化方法性能的时候，就可以使用 JMH 对优化的结果进行量化的分析。</p>
+<p>JMH 比较典型的应用场景如下：</p>
+<ol>
+<li>想准确地知道某个方法需要执行多长时间，以及执行时间和输入之间的相关性</li>
+<li>对比接口不同实现在给定条件下的吞吐量</li>
+<li>查看多少百分比的请求在多长时间内完成</li>
+</ol>
+<h2 id="jmh使用">JMH使用</h2>
+<p>以测试字符串拼接性能为例子。</p>
+<p>方式一：IDEA直接测试</p>
+<h3 id="21-引入依赖">2.1 引入依赖</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">		<span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.openjdk.jmh<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>jmh-core<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>1.32<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.openjdk.jmh<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>jmh-generator-annprocess<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>1.32<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="22-测试代码">2.2 测试代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">co.dianjiu.jhm.demo</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.openjdk.jmh.annotations.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.openjdk.jmh.infra.Blackhole</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.openjdk.jmh.results.format.ResultFormatType</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.openjdk.jmh.runner.Runner</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.openjdk.jmh.runner.RunnerException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.openjdk.jmh.runner.options.Options</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.openjdk.jmh.runner.options.OptionsBuilder</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.concurrent.TimeUnit</span><span class="o">;</span>
+
+<span class="cm">/**
+</span><span class="cm"> * @author DianJiu
+</span><span class="cm"> * @website https://dianjiu.co
+</span><span class="cm"> * @email dianjiu@dianjiu.cc
+</span><span class="cm"> * @date 2021/7/2 15:49
+</span><span class="cm"> * @desc TODO
+</span><span class="cm"> */</span>
+<span class="nd">@BenchmarkMode</span><span class="o">(</span><span class="n">Mode</span><span class="o">.</span><span class="na">AverageTime</span><span class="o">)</span>
+<span class="nd">@Warmup</span><span class="o">(</span><span class="n">iterations</span> <span class="o">=</span> <span class="n">3</span><span class="o">,</span> <span class="n">time</span> <span class="o">=</span> <span class="n">1</span><span class="o">)</span>
+<span class="nd">@Measurement</span><span class="o">(</span><span class="n">iterations</span> <span class="o">=</span> <span class="n">5</span><span class="o">,</span> <span class="n">time</span> <span class="o">=</span> <span class="n">5</span><span class="o">)</span>
+<span class="nd">@Threads</span><span class="o">(</span><span class="n">4</span><span class="o">)</span>
+<span class="nd">@Fork</span><span class="o">(</span><span class="n">1</span><span class="o">)</span>
+<span class="nd">@State</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="n">Scope</span><span class="o">.</span><span class="na">Benchmark</span><span class="o">)</span>
+<span class="nd">@OutputTimeUnit</span><span class="o">(</span><span class="n">TimeUnit</span><span class="o">.</span><span class="na">NANOSECONDS</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringConnectTest</span> <span class="o">{</span>
+
+    <span class="nd">@Param</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span><span class="s">&#34;10&#34;</span><span class="o">,</span> <span class="s">&#34;50&#34;</span><span class="o">,</span> <span class="s">&#34;100&#34;</span><span class="o">})</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">length</span><span class="o">;</span>
+
+    <span class="nd">@Benchmark</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testStringAdd</span><span class="o">(</span><span class="n">Blackhole</span> <span class="n">blackhole</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">a</span> <span class="o">+=</span> <span class="n">i</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">blackhole</span><span class="o">.</span><span class="na">consume</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Benchmark</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testStringBuilderAdd</span><span class="o">(</span><span class="n">Blackhole</span> <span class="n">blackhole</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">();</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="n">blackhole</span><span class="o">.</span><span class="na">consume</span><span class="o">(</span><span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">RunnerException</span> <span class="o">{</span>
+        <span class="n">Options</span> <span class="n">opt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OptionsBuilder</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">include</span><span class="o">(</span><span class="n">StringConnectTest</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getSimpleName</span><span class="o">())</span>
+                <span class="o">.</span><span class="na">result</span><span class="o">(</span><span class="s">&#34;result.json&#34;</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">resultFormat</span><span class="o">(</span><span class="n">ResultFormatType</span><span class="o">.</span><span class="na">JSON</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+        <span class="k">new</span> <span class="n">Runner</span><span class="o">(</span><span class="n">opt</span><span class="o">).</span><span class="na">run</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="23-执行测试">2.3 执行测试</h3>
+<p>环境信息</p>
+<blockquote>
+<p>JMH version: 1.32</p>
+<p>VM version: JDK 11.0.10, OpenJDK 64-Bit Server VM, 11.0.10+9-LTS</p>
+<p>VM invoker: C:\Program Files\Zulu\zulu-11\bin\java.exe</p>
+<p>VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.1\lib\idea_rt.jar=55934:C:\Program Files\JetBrains\IntelliJ IDEA 2021.1\bin -Dfile.encoding=UTF-8</p>
+<p>Blackhole mode: full + dont-inline hint</p>
+<p>Warmup: 3 iterations, 1 s each</p>
+<p>Measurement: 5 iterations, 5 s each</p>
+<p>Timeout: 10 min per iteration</p>
+<p>Threads: 4 threads, will synchronize iterations</p>
+<p>Benchmark mode: Average time, time/op</p>
+<p>Benchmark: co.dianjiu.jhm.demo.StringConnectTest.testStringAdd</p>
+<p>Parameters: (length = 10)</p>
+</blockquote>
+<p>预热测试</p>
+<blockquote>
+<p>Run progress: 0.00% complete, ETA 00:02:48</p>
+<p>Fork: 1 of 1</p>
+<p>Warmup Iteration   1: 482.494 ±(99.9%) 162.805 ns/op</p>
+<p>Warmup Iteration   2: 334.590 ±(99.9%) 89.881 ns/op</p>
+<p>Warmup Iteration   3: 349.968 ±(99.9%) 85.414 ns/op</p>
+</blockquote>
+<p>测量迭代</p>
+<blockquote>
+<p>Iteration   1: 395.861 ±(99.9%) 25.649 ns/op
+Iteration   2: 409.620 ±(99.9%) 26.549 ns/op
+Iteration   3: 389.641 ±(99.9%) 43.061 ns/op
+Iteration   4: 265.158 ±(99.9%) 31.658 ns/op
+Iteration   5: 278.007 ±(99.9%) 12.114 ns/op</p>
+</blockquote>
+<p>测试结果</p>
+<blockquote>
+<p>Benchmark                              								 (length)  	Mode  	Cnt     		Score      		Error  Units
+StringConnectTest.testStringAdd               		10  				avgt    	5  			 347.657 ±  269.428  ns/op
+StringConnectTest.testStringAdd               		50  				avgt    	5  			 1670.355 ±  136.749  ns/op
+StringConnectTest.testStringAdd              		100  			   avgt    	5  			 5201.457 ±  310.844  ns/op
+StringConnectTest.testStringBuilderAdd        10  				 avgt    	5   			148.904 ±    5.196  ns/op
+StringConnectTest.testStringBuilderAdd        50  				 avgt    	5  			 1371.516 ± 1243.762  ns/op
+StringConnectTest.testStringBuilderAdd       100 				 avgt    	5  			1149.044 ±  243.874  ns/op</p>
+</blockquote>
+<p>方式二：Jar包测试</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">	<span class="nt">&lt;build&gt;</span>
+        <span class="nt">&lt;plugins&gt;</span>
+            <span class="nt">&lt;plugin&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>maven-shade-plugin<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;executions&gt;</span>
+                    <span class="nt">&lt;execution&gt;</span>
+                        <span class="nt">&lt;phase&gt;</span>package<span class="nt">&lt;/phase&gt;</span>
+                        <span class="nt">&lt;goals&gt;</span>
+                            <span class="nt">&lt;goal&gt;</span>shade<span class="nt">&lt;/goal&gt;</span>
+                        <span class="nt">&lt;/goals&gt;</span>
+                        <span class="nt">&lt;configuration&gt;</span>
+                            <span class="nt">&lt;finalName&gt;</span>jmh-demo<span class="nt">&lt;/finalName&gt;</span>
+                            <span class="nt">&lt;transformers&gt;</span>
+                                <span class="nt">&lt;transformer</span>
+                                        <span class="na">implementation=</span><span class="s">&#34;org.apache.maven.plugins.shade.resource.AppendingTransformer&#34;</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;resource&gt;</span>META-INF/spring.handlers<span class="nt">&lt;/resource&gt;</span>
+                                <span class="nt">&lt;/transformer&gt;</span>
+                                <span class="nt">&lt;transformer</span>
+                                        <span class="na">implementation=</span><span class="s">&#34;org.springframework.boot.maven.PropertiesMergingResourceTransformer&#34;</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;resource&gt;</span>META-INF/spring.factories<span class="nt">&lt;/resource&gt;</span>
+                                <span class="nt">&lt;/transformer&gt;</span>
+                                <span class="nt">&lt;transformer</span>
+                                        <span class="na">implementation=</span><span class="s">&#34;org.apache.maven.plugins.shade.resource.AppendingTransformer&#34;</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;resource&gt;</span>META-INF/spring.schemas<span class="nt">&lt;/resource&gt;</span>
+                                <span class="nt">&lt;/transformer&gt;</span>
+                                <span class="nt">&lt;transformer</span>
+                                        <span class="na">implementation=</span><span class="s">&#34;org.apache.maven.plugins.shade.resource.ServicesResourceTransformer&#34;</span> <span class="nt">/&gt;</span>
+                                <span class="nt">&lt;transformer</span>
+                                        <span class="na">implementation=</span><span class="s">&#34;org.apache.maven.plugins.shade.resource.ManifestResourceTransformer&#34;</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;mainClass&gt;</span>co.dianjiu.jhm.Application<span class="nt">&lt;/mainClass&gt;</span>
+                                <span class="nt">&lt;/transformer&gt;</span>
+                            <span class="nt">&lt;/transformers&gt;</span>
+                        <span class="nt">&lt;/configuration&gt;</span>
+                    <span class="nt">&lt;/execution&gt;</span>
+                <span class="nt">&lt;/executions&gt;</span>
+            <span class="nt">&lt;/plugin&gt;</span>
+        <span class="nt">&lt;/plugins&gt;</span>
+    <span class="nt">&lt;/build&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mvn clean install
+java -jar target/jmh-demo.jar StringConnectTest
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="jmh-注解">JMH 注解</h2>
+<p>为了能够更好地使用 JMH 的各项功能，下面对 JMH 的基本概念进行讲解：</p>
+<h3 id="benchmarkmode">@BenchmarkMode</h3>
+<p>用来配置 Mode 选项，可用于类或者方法上，这个注解的 value 是一个数组，可以把几种 Mode 集合在一起执行，如：<code>@BenchmarkMode({Mode.SampleTime, Mode.AverageTime})</code>，还可以设置为 <code>Mode.All</code>，即全部执行一遍。</p>
+<ol>
+<li>Throughput：整体吞吐量，每秒执行了多少次调用，单位为 <code>ops/time</code></li>
+<li>AverageTime：用的平均时间，每次操作的平均时间，单位为 <code>time/op</code></li>
+<li>SampleTime：随机取样，最后输出取样结果的分布</li>
+<li>SingleShotTime：只运行一次，往往同时把 Warmup 次数设为 0，用于测试冷启动时的性能</li>
+<li>All：上面的所有模式都执行一次</li>
+</ol>
+<h3 id="state">@State</h3>
+<p>通过 State 可以指定一个对象的作用范围，JMH 根据 scope 来进行实例化和共享操作。@State 可以被继承使用，如果父类定义了该注解，子类则无需定义。由于 JMH 允许多线程同时执行测试，不同的选项含义如下：</p>
+<ol>
+<li>Scope.Benchmark：所有测试线程共享一个实例，测试有状态实例在多线程共享下的性能</li>
+<li>Scope.Group：同一个线程在同一个 group 里共享实例</li>
+<li>Scope.Thread：默认的 State，每个测试线程分配一个实例</li>
+</ol>
+<h3 id="outputtimeunit">@OutputTimeUnit</h3>
+<p>为统计结果的时间单位，可用于类或者方法注解</p>
+<h3 id="warmup">@Warmup</h3>
+<p>预热所需要配置的一些基本测试参数，可用于类或者方法上。一般前几次进行程序测试的时候都会比较慢，所以要让程序进行几轮预热，保证测试的准确性。参数如下所示：</p>
+<ol>
+<li>iterations：预热的次数</li>
+<li>time：每次预热的时间</li>
+<li>timeUnit：时间的单位，默认秒</li>
+<li>batchSize：批处理大小，每次操作调用几次方法</li>
+</ol>
+<blockquote>
+<p><strong>为什么需要预热？</strong>
+因为 JVM 的 JIT 机制的存在，如果某个函数被调用多次之后，JVM 会尝试将其编译为机器码，从而提高执行速度，所以为了让 benchmark 的结果更加接近真实情况就需要进行预热。</p>
+</blockquote>
+<h3 id="measurement">@Measurement</h3>
+<p>实际调用方法所需要配置的一些基本测试参数，可用于类或者方法上，参数和 <code>@Warmup</code> 相同。</p>
+<h3 id="threads">@Threads</h3>
+<p>每个进程中的测试线程，可用于类或者方法上。</p>
+<h3 id="fork">@Fork</h3>
+<p>进行 fork 的次数，可用于类或者方法上。如果 fork 数是 2 的话，则 JMH 会 fork 出两个进程来进行测试。</p>
+<h3 id="param">@Param</h3>
+<p>指定某项参数的多种情况，特别适合用来测试一个函数在不同的参数输入的情况下的性能，只能作用在字段上，使用该注解必须定义 @State 注解。</p>
+<p>在介绍完常用的注解后，让我们来看下 JMH 有哪些陷阱。</p>
+<h2 id="jmh-陷阱">JMH 陷阱</h2>
+<p>在使用 JMH 的过程中，一定要避免一些陷阱。</p>
+<p>比如 JIT 优化中的死码消除，比如以下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">@Benchmark
+public void testStringAdd(Blackhole blackhole) {
+    String a = &#34;&#34;;
+    for (int i = 0; i &lt; length; i++) {
+        a += i;
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>JVM 可能会认为变量 <code>a</code> 从来没有使用过，从而进行优化把整个方法内部代码移除掉，这就会影响测试结果。</p>
+<p>JMH 提供了两种方式避免这种问题，一种是将这个变量作为方法返回值 return a，一种是通过 Blackhole 的 consume 来避免 JIT 的优化消除。</p>
+<p>其他陷阱还有常量折叠与常量传播、永远不要在测试中写循环、使用 Fork 隔离多个测试方法、方法内联、伪共享与缓存行、分支预测、多线程测试等，感兴趣的可以阅读 <code>https://github.com/lexburner/JMH-samples</code> 了解全部的陷阱。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">点九先生</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-07-20
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">本博客文章除特别声明外，均采用<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA 4.0</a>许可协议，转载请注明出处！</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/jmh/">JMH</a>
+          <a href="/tags/java/">Java</a>
+          <a href="/tags/spring/">Spring</a>
+          <a href="/tags/springboot/">SpringBoot</a>
+          <a href="/tags/springcloud/">SpringCloud</a>
+          <a href="/tags/springcloud-alibaba/">SpringCloud Alibaba</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/go%E5%8D%8F%E7%A8%8B%E6%AD%BB%E9%94%81/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Go协程死锁</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/nginx%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/">
+            <span class="next-text nav-default">Nginx下载安装</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:dianjiu@dianjiu.cc" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/dianjiu" class="iconfont icon-github" title="github"></a>
+      <a href="http://gitlab.com/dianjiu" class="iconfont icon-gitlab" title="gitlab"></a>
+  <a href="http://dianjiu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>点九先生</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

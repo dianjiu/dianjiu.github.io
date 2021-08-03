@@ -5,8 +5,17 @@
     <link>http://dianjiu.github.io/</link>
     <description>Recent content on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 Aug 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 03 Aug 2021 14:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>谈谈类和对象的关系</title>
+      <link>http://dianjiu.github.io/post/%E8%B0%88%E8%B0%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+      <pubDate>Tue, 03 Aug 2021 14:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E8%B0%88%E8%B0%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+      <description>1、什么是类？ 类是对象的抽象，具有相同属性和方法的一组对象的集合，类是不存在的，是用来描述对象信息。 2、什么是对象？ 万物皆对象，对象是客观存</description>
+    </item>
+    
     <item>
       <title>Hello,DianJiu</title>
       <link>http://dianjiu.github.io/post/hello/</link>
@@ -14,6 +23,105 @@
       
       <guid>http://dianjiu.github.io/post/hello/</guid>
       <description>你好世界 这是第一篇博客</description>
+    </item>
+    
+    <item>
+      <title>Go协程死锁</title>
+      <link>http://dianjiu.github.io/post/go%E5%8D%8F%E7%A8%8B%E6%AD%BB%E9%94%81/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/go%E5%8D%8F%E7%A8%8B%E6%AD%BB%E9%94%81/</guid>
+      <description>一、问题截图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 fatal error: all goroutines are asleep - deadlock! goroutine 1 [chan receive]: main.main() /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:36 +0x164 goroutine 18 [chan receive]: main.consumer(0x140001020c0, 0x14000102060) /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:10 +0x148 created by main.main /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:31 +0x104 exit status 2 [Done] exited with code=1 in 10.226 seconds 二、问题代码 1 2 3 4 5 6</description>
+    </item>
+    
+    <item>
+      <title>JMH代码微基准测试</title>
+      <link>http://dianjiu.github.io/post/jmh/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/jmh/</guid>
+      <description>JMH 简介 JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编</description>
+    </item>
+    
+    <item>
+      <title>Nginx下载安装</title>
+      <link>http://dianjiu.github.io/post/nginx%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/nginx%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/</guid>
+      <description>一、简介 Nginx 是由俄罗斯人 Igor Sysoev 设计开发的，开发工作从2002 年开始，第一次公开发布在 2004 年 10 月 4 日。 官方网站为：http://nginx.org/</description>
+    </item>
+    
+    <item>
+      <title>Nginx部署服务</title>
+      <link>http://dianjiu.github.io/post/nginx%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/nginx%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</guid>
+      <description>一、查看配置 上一篇博客我们将 nginx 安装在 /usr/local/nginx 目录下，其默认的配置文件都放在这个目录的 conf 目录下，而主配置文件 nginx.conf 也在其中，后续部署应用时仅对 nginx 的配置文</description>
+    </item>
+    
+    <item>
+      <title>使用Yarn代替NPM</title>
+      <link>http://dianjiu.github.io/post/yarn/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/yarn/</guid>
+      <description>一、Yarn介绍 Yarn是由Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具 ，正如官方文档中写的，Yarn</description>
+    </item>
+    
+    <item>
+      <title>Gos Log支持自动清理临时文件</title>
+      <link>http://dianjiu.github.io/post/%E6%AF%8F%E6%AC%A1%E6%9F%A5%E8%AF%A2%E5%93%8D%E5%BA%94%E5%90%8E%E8%87%AA%E5%8A%A8%E6%B8%85%E7%90%86%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Mon, 21 Jun 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E6%AF%8F%E6%AC%A1%E6%9F%A5%E8%AF%A2%E5%93%8D%E5%BA%94%E5%90%8E%E8%87%AA%E5%8A%A8%E6%B8%85%E7%90%86%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6/</guid>
+      <description>logc客户端清理 logc/controllers/file/file.go 压缩后清理原始文件 1 2 //压缩成功后 删除原文件 os.Remove(src) 返回后清理压缩文件 1 2 3 4 defer func() { //返回后清理压缩文件 os.Remove(file) }() logs服务端</description>
+    </item>
+    
+    <item>
+      <title>搭建内部的脚手架</title>
+      <link>http://dianjiu.github.io/post/cli/</link>
+      <pubDate>Sun, 20 Jun 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/cli/</guid>
+      <description>一、项目背景 ​ 公司不同项目组，使用不同的技术框架（vue or react）,即便是同一项目组不同开发人员由不同的开发习惯。最终会导致在项目结构混</description>
+    </item>
+    
+    <item>
+      <title>Mac终端美化</title>
+      <link>http://dianjiu.github.io/post/iterm2/</link>
+      <pubDate>Thu, 03 Jun 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/iterm2/</guid>
+      <description>iterm2+zsh+oh-my-zsh+powerlevel10k 一、下载iterm2 方式一：官网下载 https://iterm2.com/ 方式二：百度云下载 链接: https://pan.baidu.com/s/1ZZnTDbVcg4A2NAu0gmBZIg 密码:关注公众号 【点九先生】 回复：iterm2 即可获得 二、安装zsh mac</description>
+    </item>
+    
+    <item>
+      <title>Gos Log V2.0.0</title>
+      <link>http://dianjiu.github.io/post/gos-log-v2/</link>
+      <pubDate>Thu, 20 May 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/gos-log-v2/</guid>
+      <description>V2.0.0 1、上线Gos Log 官网 https://goslog.dianjiu.org.cn 2、优化并行查询速度，查询全部服务器理论耗时于单台服务相当 3、每次查询响应后自动清理临时文件，优化磁盘空间 4、优化向</description>
+    </item>
+    
+    <item>
+      <title>Gos Log V1.0.0</title>
+      <link>http://dianjiu.github.io/post/gos-log-v1/</link>
+      <pubDate>Mon, 19 Apr 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/gos-log-v1/</guid>
+      <description>V1.0.0 1、基于bufio实现高性能的日志检索算法 2、基于beego实现服务端客户端分离设计 3、基于vue2.0实现服务端前后端分离设计 4、基于D</description>
+    </item>
+    
+    <item>
+      <title>发行版本更新日志说明</title>
+      <link>http://dianjiu.github.io/post/%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Wed, 10 Feb 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%E8%AF%B4%E6%98%8E/</guid>
+      <description>0、版本号说明 点九先生所有项目，今后版本以年月日命名。Job Plus 从第一发行版开始即是XYZ格式。 0.1、版本格式 Vxx.yy.zz XX &amp;ndash; 表示大版本 YY &amp;ndash; 表示中版本</description>
     </item>
     
   </channel>

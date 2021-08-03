@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发环境 on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+    <description>Recent content in 开发环境 on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 20 Jul 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Yarn代替NPM</title>
+      <link>http://dianjiu.github.io/post/yarn/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/yarn/</guid>
+      <description>一、Yarn介绍 Yarn是由Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具 ，正如官方文档中写的，Yarn</description>
+    </item>
+    
+  </channel>
+</rss>

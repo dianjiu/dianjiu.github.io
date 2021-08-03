@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学习笔记 on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 学习笔记 on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 20 Jul 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JMH代码微基准测试</title>
+      <link>http://dianjiu.github.io/post/jmh/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/jmh/</guid>
+      <description>JMH 简介 JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编</description>
+    </item>
+    
+    <item>
+      <title>搭建内部的脚手架</title>
+      <link>http://dianjiu.github.io/post/cli/</link>
+      <pubDate>Sun, 20 Jun 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/cli/</guid>
+      <description>一、项目背景 ​ 公司不同项目组，使用不同的技术框架（vue or react）,即便是同一项目组不同开发人员由不同的开发习惯。最终会导致在项目结构混</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>版本日志 on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/</link>
+    <description>Recent content in 版本日志 on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 20 May 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gos Log V2.0.0</title>
+      <link>http://dianjiu.github.io/post/gos-log-v2/</link>
+      <pubDate>Thu, 20 May 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/gos-log-v2/</guid>
+      <description>V2.0.0 1、上线Gos Log 官网 https://goslog.dianjiu.org.cn 2、优化并行查询速度，查询全部服务器理论耗时于单台服务相当 3、每次查询响应后自动清理临时文件，优化磁盘空间 4、优化向</description>
+    </item>
+    
+    <item>
+      <title>Gos Log V1.0.0</title>
+      <link>http://dianjiu.github.io/post/gos-log-v1/</link>
+      <pubDate>Mon, 19 Apr 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/gos-log-v1/</guid>
+      <description>V1.0.0 1、基于bufio实现高性能的日志检索算法 2、基于beego实现服务端客户端分离设计 3、基于vue2.0实现服务端前后端分离设计 4、基于D</description>
+    </item>
+    
+    <item>
+      <title>发行版本更新日志说明</title>
+      <link>http://dianjiu.github.io/post/%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Wed, 10 Feb 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%E8%AF%B4%E6%98%8E/</guid>
+      <description>0、版本号说明 点九先生所有项目，今后版本以年月日命名。Job Plus 从第一发行版开始即是XYZ格式。 0.1、版本格式 Vxx.yy.zz XX &amp;ndash; 表示大版本 YY &amp;ndash; 表示中版本</description>
+    </item>
+    
+  </channel>
+</rss>

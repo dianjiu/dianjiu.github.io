@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>oh-my-zsh on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/tags/oh-my-zsh/</link>
+    <description>Recent content in oh-my-zsh on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 03 Jun 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/tags/oh-my-zsh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac终端美化</title>
+      <link>http://dianjiu.github.io/post/iterm2/</link>
+      <pubDate>Thu, 03 Jun 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/iterm2/</guid>
+      <description>iterm2+zsh+oh-my-zsh+powerlevel10k 一、下载iterm2 方式一：官网下载 https://iterm2.com/ 方式二：百度云下载 链接: https://pan.baidu.com/s/1ZZnTDbVcg4A2NAu0gmBZIg 密码:关注公众号 【点九先生】 回复：iterm2 即可获得 二、安装zsh mac</description>
+    </item>
+    
+  </channel>
+</rss>

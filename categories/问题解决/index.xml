@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>问题解决 on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+    <description>Recent content in 问题解决 on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 20 Jul 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go协程死锁</title>
+      <link>http://dianjiu.github.io/post/go%E5%8D%8F%E7%A8%8B%E6%AD%BB%E9%94%81/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/go%E5%8D%8F%E7%A8%8B%E6%AD%BB%E9%94%81/</guid>
+      <description>一、问题截图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 fatal error: all goroutines are asleep - deadlock! goroutine 1 [chan receive]: main.main() /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:36 +0x164 goroutine 18 [chan receive]: main.consumer(0x140001020c0, 0x14000102060) /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:10 +0x148 created by main.main /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:31 +0x104 exit status 2 [Done] exited with code=1 in 10.226 seconds 二、问题代码 1 2 3 4 5 6</description>
+    </item>
+    
+  </channel>
+</rss>

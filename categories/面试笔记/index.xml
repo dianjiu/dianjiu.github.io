@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面试笔记 on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 面试笔记 on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 03 Aug 2021 14:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>谈谈类和对象的关系</title>
+      <link>http://dianjiu.github.io/post/%E8%B0%88%E8%B0%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+      <pubDate>Tue, 03 Aug 2021 14:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E8%B0%88%E8%B0%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+      <description>1、什么是类？ 类是对象的抽象，具有相同属性和方法的一组对象的集合，类是不存在的，是用来描述对象信息。 2、什么是对象？ 万物皆对象，对象是客观存</description>
+    </item>
+    
+  </channel>
+</rss>
