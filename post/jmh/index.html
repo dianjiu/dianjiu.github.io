@@ -49,7 +49,7 @@
 <meta itemprop="name" content="JMH代码微基准测试">
 <meta itemprop="description" content="JMH 简介 JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编"><meta itemprop="datePublished" content="2021-07-20T11:34:52+08:00" />
 <meta itemprop="dateModified" content="2021-07-20T11:34:52+08:00" />
-<meta itemprop="wordCount" content="2041">
+<meta itemprop="wordCount" content="2051">
 <meta itemprop="keywords" content="JMH,Java,Spring,SpringBoot,SpringCloud,SpringCloud Alibaba," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="JMH代码微基准测试"/>
 <meta name="twitter:description" content="JMH 简介 JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编"/>
@@ -164,6 +164,12 @@
           </ul>
         </li>
         <li><a href="#jmh-陷阱">JMH 陷阱</a></li>
+        <li><a href="#联系点九">联系点九</a>
+          <ul>
+            <li><a href="#qq群">QQ群</a></li>
+            <li><a href="#公众号">公众号</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -535,6 +541,11 @@ public void testStringAdd(Blackhole blackhole) {
 </div><p>JVM 可能会认为变量 <code>a</code> 从来没有使用过，从而进行优化把整个方法内部代码移除掉，这就会影响测试结果。</p>
 <p>JMH 提供了两种方式避免这种问题，一种是将这个变量作为方法返回值 return a，一种是通过 Blackhole 的 consume 来避免 JIT 的优化消除。</p>
 <p>其他陷阱还有常量折叠与常量传播、永远不要在测试中写循环、使用 Fork 隔离多个测试方法、方法内联、伪共享与缓存行、分支预测、多线程测试等，感兴趣的可以阅读 <code>https://github.com/lexburner/JMH-samples</code> 了解全部的陷阱。</p>
+<h2 id="联系点九">联系点九</h2>
+<h3 id="qq群">QQ群</h3>
+<p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210729173825.jpg" alt="QQ群"></p>
+<h3 id="公众号">公众号</h3>
+<p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210727175812.jpg" alt="公众号"></p>
 
     </div>
 

@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Go协程死锁">
 <meta itemprop="description" content="一、问题截图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 fatal error: all goroutines are asleep - deadlock! goroutine 1 [chan receive]: main.main() /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:36 &#43;0x164 goroutine 18 [chan receive]: main.consumer(0x140001020c0, 0x14000102060) /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:10 &#43;0x148 created by main.main /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:31 &#43;0x104 exit status 2 [Done] exited with code=1 in 10.226 seconds 二、问题代码 1 2 3 4 5 6"><meta itemprop="datePublished" content="2021-07-20T11:34:52+08:00" />
 <meta itemprop="dateModified" content="2021-07-20T11:34:52+08:00" />
-<meta itemprop="wordCount" content="939">
+<meta itemprop="wordCount" content="949">
 <meta itemprop="keywords" content="Go," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Go协程死锁"/>
 <meta name="twitter:description" content="一、问题截图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 fatal error: all goroutines are asleep - deadlock! goroutine 1 [chan receive]: main.main() /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:36 &#43;0x164 goroutine 18 [chan receive]: main.consumer(0x140001020c0, 0x14000102060) /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:10 &#43;0x148 created by main.main /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:31 &#43;0x104 exit status 2 [Done] exited with code=1 in 10.226 seconds 二、问题代码 1 2 3 4 5 6"/>
@@ -149,6 +149,12 @@
         <li><a href="#四问题解决">四、问题解决</a></li>
         <li><a href="#五具体实现">五、具体实现</a></li>
         <li><a href="#六问题总结">六、问题总结</a></li>
+        <li><a href="#联系点九">联系点九</a>
+          <ul>
+            <li><a href="#qq群">QQ群</a></li>
+            <li><a href="#公众号">公众号</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -375,6 +381,11 @@
 </div>
 </div><h2 id="六问题总结">六、问题总结</h2>
 <p>所有 goroutine 在 main() 函数结束时会一同结束。</p>
+<h2 id="联系点九">联系点九</h2>
+<h3 id="qq群">QQ群</h3>
+<p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210729173825.jpg" alt="QQ群"></p>
+<h3 id="公众号">公众号</h3>
+<p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210727175812.jpg" alt="公众号"></p>
 
     </div>
 
