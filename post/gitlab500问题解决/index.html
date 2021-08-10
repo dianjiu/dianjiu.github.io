@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Gitlab500问题解决 - 点九博客 - 点九先生的技术博客分享</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="点九先生" /><meta name="description" content="问题截图 定位问题 1、查看状态 1 2 3 4 # 查看状态 gitlab-ctl status # 如图发现gitaly 是down的状态 2、查看日志 1 2 3 4 5 # 查看日志 gitlab-ctl tail gitaly # 或者查看全文" /><meta name="keywords" content="博客, 个人博客, 点九先生" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.86.1 with theme even" />
+
+
+<link rel="canonical" href="http://dianjiu.github.io/post/gitlab500%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Gitlab500问题解决" />
+<meta property="og:description" content="问题截图 定位问题 1、查看状态 1 2 3 4 # 查看状态 gitlab-ctl status # 如图发现gitaly 是down的状态 2、查看日志 1 2 3 4 5 # 查看日志 gitlab-ctl tail gitaly # 或者查看全文" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dianjiu.github.io/post/gitlab500%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-08-06T11:34:52+08:00" />
+<meta property="article:modified_time" content="2021-08-06T11:34:52+08:00" />
+
+<meta itemprop="name" content="Gitlab500问题解决">
+<meta itemprop="description" content="问题截图 定位问题 1、查看状态 1 2 3 4 # 查看状态 gitlab-ctl status # 如图发现gitaly 是down的状态 2、查看日志 1 2 3 4 5 # 查看日志 gitlab-ctl tail gitaly # 或者查看全文"><meta itemprop="datePublished" content="2021-08-06T11:34:52+08:00" />
+<meta itemprop="dateModified" content="2021-08-06T11:34:52+08:00" />
+<meta itemprop="wordCount" content="1013">
+<meta itemprop="keywords" content="Gitlab," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gitlab500问题解决"/>
+<meta name="twitter:description" content="问题截图 定位问题 1、查看状态 1 2 3 4 # 查看状态 gitlab-ctl status # 如图发现gitaly 是down的状态 2、查看日志 1 2 3 4 5 # 查看日志 gitlab-ctl tail gitaly # 或者查看全文"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">点九博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">点九博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Gitlab500问题解决</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-08-06 </span>
+        <div class="post-category">
+            <a href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"> 问题解决 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#问题截图">问题截图</a></li>
+        <li><a href="#定位问题">定位问题</a>
+          <ul>
+            <li><a href="#1查看状态">1、查看状态</a></li>
+            <li><a href="#2查看日志">2、查看日志</a></li>
+            <li><a href="#3百度答案">3、百度答案</a></li>
+            <li><a href="#4查看内存">4、查看内存</a></li>
+            <li><a href="#5查看硬盘">5、查看硬盘</a></li>
+          </ul>
+        </li>
+        <li><a href="#解决问题">解决问题</a></li>
+        <li><a href="#自动清理">自动清理</a></li>
+        <li><a href="#大功告成">大功告成</a></li>
+        <li><a href="#联系点九">联系点九</a>
+          <ul>
+            <li><a href="#qq群">QQ群</a></li>
+            <li><a href="#公众号">公众号</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="问题截图">问题截图</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/82baeeb14cc0a3ebf0288e4aa717c1a0.png" alt="查看源图像"></p>
+<h2 id="定位问题">定位问题</h2>
+<h3 id="1查看状态">1、查看状态</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 查看状态</span>
+gitlab-ctl status
+
+<span class="c1"># 如图发现gitaly 是down的状态</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://img-blog.csdnimg.cn/20210423235543903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1BvaW50OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="2查看日志">2、查看日志</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 查看日志</span>
+gitlab-ctl tail gitaly
+<span class="c1"># 或者查看全文</span>
+cat /var/log/gitlab/gitaly/current
+<span class="c1"># 如下图 并没有报错的</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://img-blog.csdnimg.cn/2021042323563418.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1BvaW50OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="3百度答案">3、百度答案</h3>
+<p><a href="https://www.cnblogs.com/forlive/p/12469670.html">https://www.cnblogs.com/forlive/p/12469670.html</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># rm /var/opt/gitlab/gitaly/gitaly.pid</span>
+rm：是否删除普通空文件 <span class="s2">&#34;/var/opt/gitlab/gitaly/gitaly.pid&#34;</span>？y
+<span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># gitlab-ctl restart</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>但是有另一篇文章说可能是内存问题</p>
+<p><a href="https://www.ifeegoo.com/the-installation-backup-migration-restore-of-gitlab-on-centos-7.html">https://www.ifeegoo.com/the-installation-backup-migration-restore-of-gitlab-on-centos-7.html</a></p>
+<blockquote>
+<p>通过查资料，部分人说这个是由于内存不足，可以通过创建虚拟内存来解决问题。通过官方关于<a href="https://docs.gitlab.com/ce/install/requirements.html#memory"> GitLab 内存这块的说明</a>，也要求了最低配置：至少需要 8G 的 RAM + swap 内存。我们首先通过 free -m 命令来查看是否已经创建 Swap 分区，默认的服务器是没有创建的。</p>
+</blockquote>
+<h3 id="4查看内存">4、查看内存</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 查看内存</span>
+free -m
+<span class="c1"># 如下图 但是我的内存还很多</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://img-blog.csdnimg.cn/20210423235703612.png" alt="在这里插入图片描述"></p>
+<h3 id="5查看硬盘">5、查看硬盘</h3>
+<blockquote>
+<p>还有一篇文章说，删除gitaly.pid之后要重启配置再重启服务，具体文章连接弄丢了，不好意思了大佬。（其实这个时候，我已经想起来既然有可能是内存不足，难道没可能是硬盘不够了吗？刚好偏偏这个时候，在重启配置的时候，提示了硬盘不足。）</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># rm /var/opt/gitlab/gitaly/gitaly.pid</span>
+rm：是否删除普通空文件 <span class="s2">&#34;/var/opt/gitlab/gitaly/gitaly.pid&#34;</span>？y
+<span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># gitlab-ctl reconfigure #多了这个步骤</span>
+<span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># gitlab-ctl restart</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://img-blog.csdnimg.cn/20210423235723752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1BvaW50OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 查看磁盘各分区大小、已用空间等信息</span>
+df -h
+<span class="c1"># 如下图 根目录挂载点竟然满了</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://img-blog.csdnimg.cn/20210423235742872.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1BvaW50OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>硬盘比较满了，我们想找一些目录来清除，可以用下面命令查看当前目录以下搜索文件和子目录大小。找出特别大的，看里面有没有文件可删：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">du -sh *
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://img-blog.csdnimg.cn/20210423235804205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1BvaW50OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>我们继续往里面跟</p>
+<p><img src="https://img-blog.csdnimg.cn/2021042323581719.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1BvaW50OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="解决问题">解决问题</h2>
+<p>直接把这个缓存干掉</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 非跑路情况不要随便用哈</span>
+rm -rf ./cache
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://img-blog.csdnimg.cn/20210423235831915.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1BvaW50OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>空出了18G</p>
+<p><img src="https://img-blog.csdnimg.cn/20210423235845672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1BvaW50OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>测试服务，是否可用?
+NICE，完美解决 睡觉去喽
+等等，后面缓存时常会有，每次满了都手动删除？</p>
+<h2 id="自动清理">自动清理</h2>
+<p>基于Python实现一个定时检测文件大小，如果缓存文件超过1G,自动清理该目录（/var/cache）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="c1">#</span>
+<span class="c1"># 开线程检测文件夹大小，超过指定大小，则按文件最后修改时间排序并删除一部分旧图片</span>
+<span class="c1"># 在线程里每隔一段时间检测一次</span>
+<span class="c1">#</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># 获取文件夹大小</span>
+<span class="k">def</span> <span class="nf">get_size</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="n">totalsize</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+        <span class="n">totalsize</span> <span class="o">=</span> <span class="n">totalsize</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">totalsize</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">1024</span>
+
+
+<span class="c1"># 1文件目录   2文件夹最大大小(M)</span>
+<span class="k">def</span> <span class="nf">detect_file_size</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">size_Max</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">get_size</span><span class="p">(</span><span class="n">file_path</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">get_size</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">size_Max</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;del dir:</span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">file_path</span><span class="p">))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s2">&#34;rm -rf &#34;</span><span class="o">+</span><span class="n">file_path</span><span class="p">)</span>
+
+
+<span class="c1"># 检测线程，当文件超过1GB时，自动删除</span>
+<span class="k">def</span> <span class="nf">detectPicSize</span><span class="p">():</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;======detect============&#39;</span><span class="p">)</span>
+        <span class="n">detect_file_size</span><span class="p">(</span><span class="s2">&#34;/var/cache/&#34;</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+    <span class="c1"># 创建检测线程</span>
+    <span class="n">detect_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">detectPicSize</span><span class="p">)</span>
+    <span class="n">detect_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>上传脚本到服务器目录，后台运行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">nohup python -u del_cache.py &gt;del_cache.log <span class="p">&amp;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210810155711.png" alt="image-20210810155711818"></p>
+<h2 id="大功告成">大功告成</h2>
+<p><img src="https://img-blog.csdnimg.cn/20210423235900561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1BvaW50OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="联系点九">联系点九</h2>
+<h3 id="qq群">QQ群</h3>
+<p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210729173825.jpg" alt="QQ群"></p>
+<h3 id="公众号">公众号</h3>
+<p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210727175812.jpg" alt="公众号"></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">点九先生</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-08-06
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">本博客文章除特别声明外，均采用<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA 4.0</a>许可协议，转载请注明出处！</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/gitlab/">Gitlab</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/gos-log-v3/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Gos Log V3.0.1</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/">
+            <span class="next-text nav-default">基于hugo搭建个人博客平台</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:dianjiu@dianjiu.cc" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/dianjiu" class="iconfont icon-github" title="github"></a>
+      <a href="http://gitlab.com/dianjiu" class="iconfont icon-gitlab" title="gitlab"></a>
+  <a href="http://dianjiu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>点九先生</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
