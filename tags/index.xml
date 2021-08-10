@@ -6,7 +6,16 @@
     <description>Recent content in Tags on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 03 Aug 2021 16:04:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Aug 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gos-log</title>
+      <link>http://dianjiu.github.io/tags/gos-log/</link>
+      <pubDate>Mon, 09 Aug 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/tags/gos-log/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>hugo</title>
       <link>http://dianjiu.github.io/tags/hugo/</link>
@@ -121,15 +130,6 @@
       <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
       
       <guid>http://dianjiu.github.io/tags/yarn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gos-log</title>
-      <link>http://dianjiu.github.io/tags/gos-log/</link>
-      <pubDate>Mon, 21 Jun 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/gos-log/</guid>
       <description></description>
     </item>
     

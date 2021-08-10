@@ -3,27 +3,55 @@
   
   <url>
     <loc>http://dianjiu.github.io/categories/</loc>
-    <lastmod>2021-08-03T16:04:52+08:00</lastmod>
+    <lastmod>2021-08-09T11:34:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://dianjiu.github.io/tags/hugo/</loc>
-    <lastmod>2021-08-03T16:04:52+08:00</lastmod>
+    <loc>http://dianjiu.github.io/post/gos-log-v3/</loc>
+    <lastmod>2021-08-09T11:34:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://dianjiu.github.io/tags/gos-log/</loc>
+    <lastmod>2021-08-09T11:34:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://dianjiu.github.io/post/</loc>
-    <lastmod>2021-08-03T16:04:52+08:00</lastmod>
+    <lastmod>2021-08-09T11:34:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://dianjiu.github.io/tags/</loc>
+    <lastmod>2021-08-09T11:34:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://dianjiu.github.io/</loc>
+    <lastmod>2021-08-09T11:34:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2021-08-09T11:34:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://dianjiu.github.io/tags/hugo/</loc>
     <lastmod>2021-08-03T16:04:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38,13 +66,6 @@
   
   <url>
     <loc>http://dianjiu.github.io/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/</loc>
-    <lastmod>2021-08-03T16:04:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://dianjiu.github.io/</loc>
     <lastmod>2021-08-03T16:04:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -233,13 +254,6 @@
   </url>
   
   <url>
-    <loc>http://dianjiu.github.io/tags/gos-log/</loc>
-    <lastmod>2021-06-21T11:34:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://dianjiu.github.io/categories/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-06-21T11:34:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -318,13 +332,6 @@
   
   <url>
     <loc>http://dianjiu.github.io/post/gos-log-v2/</loc>
-    <lastmod>2021-05-20T11:34:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2021-05-20T11:34:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -6,7 +6,16 @@
     <description>Recent content in Categories on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 03 Aug 2021 16:04:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Aug 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>版本日志</title>
+      <link>http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 09 Aug 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>其他分类</title>
       <link>http://dianjiu.github.io/categories/%E5%85%B6%E4%BB%96%E5%88%86%E7%B1%BB/</link>
@@ -76,15 +85,6 @@
       <pubDate>Mon, 21 Jun 2021 11:34:52 +0800</pubDate>
       
       <guid>http://dianjiu.github.io/categories/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>版本日志</title>
-      <link>http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/</link>
-      <pubDate>Thu, 20 May 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,16 @@
     <description>Recent content in gos-log on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 21 Jun 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/tags/gos-log/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Aug 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/tags/gos-log/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gos Log V3.0.1</title>
+      <link>http://dianjiu.github.io/post/gos-log-v3/</link>
+      <pubDate>Mon, 09 Aug 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/gos-log-v3/</guid>
+      <description>V3.0.1 支持客户端logc启动即注册 支持服务端logs定时检测客户端在线状态 支持关键字不唯一时，执行全文检索 优化删除逻辑 联系点九 QQ群 公众号</description>
+    </item>
+    
     <item>
       <title>Gos Log支持自动清理临时文件</title>
       <link>http://dianjiu.github.io/post/%E6%AF%8F%E6%AC%A1%E6%9F%A5%E8%AF%A2%E5%93%8D%E5%BA%94%E5%90%8E%E8%87%AA%E5%8A%A8%E6%B8%85%E7%90%86%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6/</link>
