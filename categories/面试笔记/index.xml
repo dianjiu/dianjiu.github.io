@@ -6,7 +6,16 @@
     <description>Recent content in 面试笔记 on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 03 Aug 2021 14:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Aug 2021 23:59:59 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>String和StringBuffer,StringBuilder的区别是什么?</title>
+      <link>http://dianjiu.github.io/post/string%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Tue, 10 Aug 2021 23:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/string%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>长度是否可变 首先，从长度是否可变来分析： String的长度是不可变的，因为在JDK8中String 类中使用 final 关键字字符数组保存字符串。在JD</description>
+    </item>
+    
     <item>
       <title>谈谈类和对象的关系</title>
       <link>http://dianjiu.github.io/post/%E8%B0%88%E8%B0%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</link>

@@ -6,7 +6,16 @@
     <description>Recent content on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Aug 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Aug 2021 23:59:59 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>String和StringBuffer,StringBuilder的区别是什么?</title>
+      <link>http://dianjiu.github.io/post/string%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Tue, 10 Aug 2021 23:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/string%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>长度是否可变 首先，从长度是否可变来分析： String的长度是不可变的，因为在JDK8中String 类中使用 final 关键字字符数组保存字符串。在JD</description>
+    </item>
+    
     <item>
       <title>Gos Log V3.0.1</title>
       <link>http://dianjiu.github.io/post/gos-log-v3/</link>
