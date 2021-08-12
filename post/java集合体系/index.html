@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Java集合体系有哪些?">
 <meta itemprop="description" content="概述 在java.util包中，主要包含3中集合类：set、list、map Iterator：迭代器，可以通过迭代器遍历集合中的数据。 Coll"><meta itemprop="datePublished" content="2021-08-11T23:59:59+08:00" />
 <meta itemprop="dateModified" content="2021-08-11T23:59:59+08:00" />
-<meta itemprop="wordCount" content="3033">
+<meta itemprop="wordCount" content="3041">
 <meta itemprop="keywords" content="Java," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Java集合体系有哪些?"/>
 <meta name="twitter:description" content="概述 在java.util包中，主要包含3中集合类：set、list、map Iterator：迭代器，可以通过迭代器遍历集合中的数据。 Coll"/>
@@ -147,13 +147,19 @@
         <li><a href="#关系图">关系图</a>
           <ul>
             <li><a href="#iterator">Iterator</a></li>
-            <li><a href="#linkediterator">LinkedIterator</a></li>
+            <li><a href="#listiterator">ListIterator</a></li>
             <li><a href="#collection">Collection</a></li>
           </ul>
         </li>
         <li><a href="#list">List</a></li>
         <li><a href="#set">Set</a></li>
         <li><a href="#map">Map</a></li>
+        <li><a href="#联系点九">联系点九</a>
+          <ul>
+            <li><a href="#qq群">QQ群</a></li>
+            <li><a href="#公众号">公众号</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -212,8 +218,8 @@
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="linkediterator">LinkedIterator</h3>
-<p><strong>LinkedIterator</strong>在Iterator的基础上又添加了<strong>hasPrevious(),previous(),nextIndex(),previousIndex(),set(),add()<strong>六种方法，那些元素有序的集合，实现的一般都是LinkedIterator接口，实现这个接口的集合可以</strong>双向遍历</strong>，既可以通过**next()<strong>访问下一个元素，又可以通过</strong>previous()**访问前一个元素，比如ArrayList。</p>
+</div><h3 id="listiterator">ListIterator</h3>
+<p><strong>ListIterator</strong>在Iterator的基础上又添加了<strong>hasPrevious(),previous(),nextIndex(),previousIndex(),set(),add()<strong>六种方法，那些元素有序的集合，实现的一般都是LinkedIterator接口，实现这个接口的集合可以</strong>双向遍历</strong>，既可以通过**next()<strong>访问下一个元素，又可以通过</strong>previous()**访问前一个元素，比如ArrayList。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -317,6 +323,11 @@
 </ul>
 <p>TreeMap：底层数据结构是二叉树，线程不同步，可以用于给map集合中的键进行排序。</p>
 <p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210811152935.png" alt="image-20210811152935294"></p>
+<h2 id="联系点九">联系点九</h2>
+<h3 id="qq群">QQ群</h3>
+<p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210729173825.jpg" alt="QQ群"></p>
+<h3 id="公众号">公众号</h3>
+<p><img src="https://gitee.com/dianjiu/typora-imgs/raw/master/imgs/20210727175812.jpg" alt="公众号"></p>
 
     </div>
 
@@ -343,7 +354,11 @@
           <a href="/tags/java/">Java</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/%E8%AF%B4%E4%B8%8Blist-%E5%92%8C-mapset%E7%9A%84%E5%8C%BA%E5%88%AB/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">说下List 和 Map、Set的区别</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="/post/string%E9%9D%A2%E8%AF%95%E9%A2%98/">
             <span class="next-text nav-default">String和StringBuffer,StringBuilder的区别是什么?</span>
             <span class="next-text nav-mobile">下一篇</span>
