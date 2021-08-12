@@ -6,7 +6,16 @@
     <description>Recent content in 面试笔记 on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 10 Aug 2021 23:59:59 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Aug 2021 23:59:59 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java集合体系有哪些?</title>
+      <link>http://dianjiu.github.io/post/java%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB/</link>
+      <pubDate>Wed, 11 Aug 2021 23:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/java%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB/</guid>
+      <description>概述 在java.util包中，主要包含3中集合类：set、list、map Iterator：迭代器，可以通过迭代器遍历集合中的数据。 Coll</description>
+    </item>
+    
     <item>
       <title>String和StringBuffer,StringBuilder的区别是什么?</title>
       <link>http://dianjiu.github.io/post/string%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
