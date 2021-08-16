@@ -6,7 +6,25 @@
     <description>Recent content in 面试笔记 on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 12 Aug 2021 11:24:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Aug 2021 11:59:59 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HashMap什么时候需要扩容？怎么实现的？</title>
+      <link>http://dianjiu.github.io/post/hashmap%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E6%89%A9%E5%AE%B9/</link>
+      <pubDate>Fri, 13 Aug 2021 11:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/hashmap%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E6%89%A9%E5%AE%B9/</guid>
+      <description>扩容概述 扩容需要分配一个新的数组，新数组的长度是老数组长度的两倍，然后遍历整个老数组，把其中的每个元素全部重新Hash计算，分配到新的数组结</description>
+    </item>
+    
+    <item>
+      <title>说一下HashMap底层实现原理</title>
+      <link>http://dianjiu.github.io/post/%E8%AF%B4%E4%B8%80%E4%B8%8Bhashmap%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Thu, 12 Aug 2021 23:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E8%AF%B4%E4%B8%80%E4%B8%8Bhashmap%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</guid>
+      <description>JDK8版本之后 底层是基于数组+链表+红黑树的 当链表的长度大于8时转换为红黑树，当红黑树的元素个数小于6时，又会转换为链表，减少检索时间。 1</description>
+    </item>
+    
     <item>
       <title>说下List 和 Map、Set的区别</title>
       <link>http://dianjiu.github.io/post/%E8%AF%B4%E4%B8%8Blist-%E5%92%8C-mapset%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
@@ -41,6 +59,24 @@
       
       <guid>http://dianjiu.github.io/post/%E8%B0%88%E8%B0%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
       <description>1、什么是类？ 类是对象的抽象，具有相同属性和方法的一组对象的集合，类是不存在的，是用来描述对象信息。 2、什么是对象？ 万物皆对象，对象是客观存</description>
+    </item>
+    
+    <item>
+      <title>什么是隐式转换和显式转换</title>
+      <link>http://dianjiu.github.io/post/%E4%BB%80%E4%B9%88%E6%98%AF%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%92%8C%E6%98%BE%E5%BC%8F%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Mon, 02 Aug 2021 14:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E4%BB%80%E4%B9%88%E6%98%AF%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%92%8C%E6%98%BE%E5%BC%8F%E8%BD%AC%E6%8D%A2/</guid>
+      <description>一、什么是隐式转换？ 1.1、隐式转换 隐式类型转换，也称自动类型转换，是指不需要书写代码，由系统自动完成的类型转换。由于实际开发中这样的类型转</description>
+    </item>
+    
+    <item>
+      <title>什么是BS结构和CS结构</title>
+      <link>http://dianjiu.github.io/post/%E4%BB%80%E4%B9%88%E6%98%AFbs%E7%BB%93%E6%9E%84%E5%92%8Ccs%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Sun, 01 Aug 2021 14:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E4%BB%80%E4%B9%88%E6%98%AFbs%E7%BB%93%E6%9E%84%E5%92%8Ccs%E7%BB%93%E6%9E%84/</guid>
+      <description>C/S和B/S都是互联网中常见的网络结构模型。 一、什么是C/S模型？ C是英文单词“Client”的首字母，即客户端的意思，C/S就是“Cli</description>
     </item>
     
   </channel>
