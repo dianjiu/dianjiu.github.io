@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MySQL on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/tags/mysql/</link>
+    <description>Recent content in MySQL on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 17 Aug 2021 21:59:59 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL的索引有哪几种</title>
+      <link>http://dianjiu.github.io/post/mysql%E7%9A%84%E7%B4%A2%E5%BC%95%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D/</link>
+      <pubDate>Tue, 17 Aug 2021 21:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/mysql%E7%9A%84%E7%B4%A2%E5%BC%95%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D/</guid>
+      <description>聊点别的 为什么要用索引呢？因为索引可以提高查询速度，而且还可以降低SQL服务器的负载。用户查询索引数据时，不会再便利表中的所有记录，而是直接</description>
+    </item>
+    
+  </channel>
+</rss>
