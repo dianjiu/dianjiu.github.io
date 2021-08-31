@@ -1,2 +1,1 @@
 User-agent: *
-Sitemap: http://dianjiu.github.io/sitemap.xml

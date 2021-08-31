@@ -6,7 +6,16 @@
     <description>Recent content in 学习笔记 on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 20 Jul 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Aug 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DynamoDB概述</title>
+      <link>http://dianjiu.github.io/post/dynamodb%E6%A6%82%E8%BF%B0/</link>
+      <pubDate>Fri, 20 Aug 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/dynamodb%E6%A6%82%E8%BF%B0/</guid>
+      <description>概述介绍 Amazon DynamoDB 是一种完全托管的 NoSQL 数据库服务，提供快速而可预测的性能，能够实现无缝扩展。DynamoDB 允许您免除操作和扩展分布式数据库的管理工</description>
+    </item>
+    
     <item>
       <title>JMH代码微基准测试</title>
       <link>http://dianjiu.github.io/post/jmh/</link>
