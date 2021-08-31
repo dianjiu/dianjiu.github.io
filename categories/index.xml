@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/categories/</link>
+    <description>Recent content in Categories on 点九博客 - 点九先生的技术博客分享</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 20 Aug 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习笔记</title>
+      <link>http://dianjiu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 20 Aug 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>面试笔记</title>
+      <link>http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 17 Aug 2021 21:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>版本日志</title>
+      <link>http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 09 Aug 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E7%89%88%E6%9C%AC%E6%97%A5%E5%BF%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>问题解决</title>
+      <link>http://dianjiu.github.io/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Fri, 06 Aug 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>其他分类</title>
+      <link>http://dianjiu.github.io/categories/%E5%85%B6%E4%BB%96%E5%88%86%E7%B1%BB/</link>
+      <pubDate>Tue, 03 Aug 2021 16:04:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E5%85%B6%E4%BB%96%E5%88%86%E7%B1%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生活记录</title>
+      <link>http://dianjiu.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 03 Aug 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>开发环境</title>
+      <link>http://dianjiu.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作系统</title>
+      <link>http://dianjiu.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>项目笔记</title>
+      <link>http://dianjiu.github.io/categories/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 21 Jun 2021 11:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/categories/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
