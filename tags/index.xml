@@ -1,262 +1,235 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 点九博客 - 点九先生的技术博客分享</title>
-    <link>http://dianjiu.github.io/tags/</link>
-    <description>Recent content in Tags on 点九博客 - 点九先生的技术博客分享</description>
+    <title>点九博客 - 点九先生的技术博客分享</title>
+    <link>http://dianjiu.github.io/</link>
+    <description>Recent content on 点九博客 - 点九先生的技术博客分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 20 Aug 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Aug 2021 11:34:52 +0800</lastBuildDate><atom:link href="http://dianjiu.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DynamoDB</title>
-      <link>http://dianjiu.github.io/tags/dynamodb/</link>
+      <title>DynamoDB概述</title>
+      <link>http://dianjiu.github.io/post/dynamodb%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Fri, 20 Aug 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/dynamodb/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/dynamodb%E6%A6%82%E8%BF%B0/</guid>
+      <description>概述介绍 Amazon DynamoDB 是一种完全托管的 NoSQL 数据库服务，提供快速而可预测的性能，能够实现无缝扩展。DynamoDB 允许您免除操作和扩展分布式数据库的管理工</description>
     </item>
     
     <item>
-      <title>MySQL</title>
-      <link>http://dianjiu.github.io/tags/mysql/</link>
+      <title>MySQL的索引有哪几种</title>
+      <link>http://dianjiu.github.io/post/mysql%E7%9A%84%E7%B4%A2%E5%BC%95%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D/</link>
       <pubDate>Tue, 17 Aug 2021 21:59:59 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/mysql/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/mysql%E7%9A%84%E7%B4%A2%E5%BC%95%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D/</guid>
+      <description>聊点别的 为什么要用索引呢？因为索引可以提高查询速度，而且还可以降低SQL服务器的负载。用户查询索引数据时，不会再便利表中的所有记录，而是直接</description>
     </item>
     
     <item>
-      <title>Java</title>
-      <link>http://dianjiu.github.io/tags/java/</link>
+      <title>HashMap什么时候需要扩容？怎么实现的？</title>
+      <link>http://dianjiu.github.io/post/hashmap%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E6%89%A9%E5%AE%B9/</link>
       <pubDate>Sat, 14 Aug 2021 11:59:59 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/java/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/hashmap%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E6%89%A9%E5%AE%B9/</guid>
+      <description>扩容概述 扩容需要分配一个新的数组，新数组的长度是老数组长度的两倍，然后遍历整个老数组，把其中的每个元素全部重新Hash计算，分配到新的数组结</description>
     </item>
     
     <item>
-      <title>gos-log</title>
-      <link>http://dianjiu.github.io/tags/gos-log/</link>
+      <title>说一下HashMap底层实现原理</title>
+      <link>http://dianjiu.github.io/post/%E8%AF%B4%E4%B8%80%E4%B8%8Bhashmap%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Fri, 13 Aug 2021 23:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E8%AF%B4%E4%B8%80%E4%B8%8Bhashmap%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</guid>
+      <description>JDK8版本之后 底层是基于数组+链表+红黑树的 当链表的长度大于8时转换为红黑树，当红黑树的元素个数小于6时，又会转换为链表，减少检索时间。 1</description>
+    </item>
+    
+    <item>
+      <title>说下List 和 Map、Set的区别</title>
+      <link>http://dianjiu.github.io/post/%E8%AF%B4%E4%B8%8Blist-%E5%92%8C-mapset%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Thu, 12 Aug 2021 11:24:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E8%AF%B4%E4%B8%8Blist-%E5%92%8C-mapset%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>从存储结构分析 List和Set都是继承自Collection接口的，用于存储单列数据的集合 Map是用于存储双列数据的集合 从存储特点分析 Lis</description>
+    </item>
+    
+    <item>
+      <title>Java集合体系有哪些?</title>
+      <link>http://dianjiu.github.io/post/java%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB/</link>
+      <pubDate>Wed, 11 Aug 2021 23:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/java%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB/</guid>
+      <description>概述 在java.util包中，主要包含3中集合类：set、list、map Iterator：迭代器，可以通过迭代器遍历集合中的数据。 Coll</description>
+    </item>
+    
+    <item>
+      <title>String和StringBuffer,StringBuilder的区别是什么?</title>
+      <link>http://dianjiu.github.io/post/string%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Tue, 10 Aug 2021 23:59:59 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/string%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>长度是否可变 首先，从长度是否可变来分析： String的长度是不可变的，因为在JDK8中String 类中使用 final 关键字字符数组保存字符串。在JD</description>
+    </item>
+    
+    <item>
+      <title>Gos Log V3.0.1</title>
+      <link>http://dianjiu.github.io/post/gos-log-v3/</link>
       <pubDate>Mon, 09 Aug 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/gos-log/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/gos-log-v3/</guid>
+      <description>V3.0.1 支持客户端logc启动即注册 支持服务端logs定时检测客户端在线状态 支持关键字不唯一时，执行全文检索 优化删除逻辑 联系点九 QQ群 公众号</description>
     </item>
     
     <item>
-      <title>Gitlab</title>
-      <link>http://dianjiu.github.io/tags/gitlab/</link>
+      <title>Gitlab500问题解决</title>
+      <link>http://dianjiu.github.io/post/gitlab500%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
       <pubDate>Fri, 06 Aug 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/gitlab/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/gitlab500%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+      <description>问题截图 定位问题 1、查看状态 1 2 3 4 # 查看状态 gitlab-ctl status # 如图发现gitaly 是down的状态 2、查看日志 1 2 3 4 5 # 查看日志 gitlab-ctl tail gitaly # 或者查看全文</description>
     </item>
     
     <item>
-      <title>hugo</title>
-      <link>http://dianjiu.github.io/tags/hugo/</link>
+      <title>基于hugo搭建个人博客平台</title>
+      <link>http://dianjiu.github.io/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/</link>
       <pubDate>Tue, 03 Aug 2021 16:04:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/hugo/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/</guid>
+      <description>演示地址 点九博客 - 点九先生的技术博客分享 基于hugo 搭建的博客系统 安装hugo win10 1 2 choco install hugo -confirm choco install hugo-extended -confirm mac 1 brew install hugo linux 1 brew install hugo 创建blog 1 hugo new site</description>
     </item>
     
     <item>
-      <title>hello</title>
-      <link>http://dianjiu.github.io/tags/hello/</link>
+      <title>谈谈类和对象的关系</title>
+      <link>http://dianjiu.github.io/post/%E8%B0%88%E8%B0%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+      <pubDate>Tue, 03 Aug 2021 14:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E8%B0%88%E8%B0%88%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+      <description>1、什么是类？ 类是对象的抽象，具有相同属性和方法的一组对象的集合，类是不存在的，是用来描述对象信息。 2、什么是对象？ 万物皆对象，对象是客观存</description>
+    </item>
+    
+    <item>
+      <title>Hello,DianJiu</title>
+      <link>http://dianjiu.github.io/post/hello/</link>
       <pubDate>Tue, 03 Aug 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/hello/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/hello/</guid>
+      <description>你好世界 这是第一篇博客 aaa bbb ccc 联系点九 QQ群 公众号</description>
     </item>
     
     <item>
-      <title>Go</title>
-      <link>http://dianjiu.github.io/tags/go/</link>
+      <title>什么是隐式转换和显式转换</title>
+      <link>http://dianjiu.github.io/post/%E4%BB%80%E4%B9%88%E6%98%AF%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%92%8C%E6%98%BE%E5%BC%8F%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Mon, 02 Aug 2021 14:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E4%BB%80%E4%B9%88%E6%98%AF%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%92%8C%E6%98%BE%E5%BC%8F%E8%BD%AC%E6%8D%A2/</guid>
+      <description>一、什么是隐式转换？ 1.1、隐式转换 隐式类型转换，也称自动类型转换，是指不需要书写代码，由系统自动完成的类型转换。由于实际开发中这样的类型转</description>
+    </item>
+    
+    <item>
+      <title>什么是BS结构和CS结构</title>
+      <link>http://dianjiu.github.io/post/%E4%BB%80%E4%B9%88%E6%98%AFbs%E7%BB%93%E6%9E%84%E5%92%8Ccs%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Sun, 01 Aug 2021 14:34:52 +0800</pubDate>
+      
+      <guid>http://dianjiu.github.io/post/%E4%BB%80%E4%B9%88%E6%98%AFbs%E7%BB%93%E6%9E%84%E5%92%8Ccs%E7%BB%93%E6%9E%84/</guid>
+      <description>C/S和B/S都是互联网中常见的网络结构模型。 一、什么是C/S模型？ C是英文单词“Client”的首字母，即客户端的意思，C/S就是“Cli</description>
+    </item>
+    
+    <item>
+      <title>Go协程死锁</title>
+      <link>http://dianjiu.github.io/post/go%E5%8D%8F%E7%A8%8B%E6%AD%BB%E9%94%81/</link>
       <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/go/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/go%E5%8D%8F%E7%A8%8B%E6%AD%BB%E9%94%81/</guid>
+      <description>一、问题截图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 fatal error: all goroutines are asleep - deadlock! goroutine 1 [chan receive]: main.main() /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:36 +0x164 goroutine 18 [chan receive]: main.consumer(0x140001020c0, 0x14000102060) /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:10 +0x148 created by main.main /Users/dianjiu/Codes/go/src/go-learn/demo03/demo.go:31 +0x104 exit status 2 [Done] exited with code=1 in 10.226 seconds 二、问题代码 1 2 3 4 5 6</description>
     </item>
     
     <item>
-      <title>JMH</title>
-      <link>http://dianjiu.github.io/tags/jmh/</link>
+      <title>JMH代码微基准测试</title>
+      <link>http://dianjiu.github.io/post/jmh/</link>
       <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/jmh/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/jmh/</guid>
+      <description>JMH 简介 JMH(Java Microbenchmark Harness)是用于代码微基准测试的工具套件，主要是基于方法层面的基准测试，精度可以达到纳秒级。该工具是由 Oracle 内部实现 JIT 的大牛们编</description>
     </item>
     
     <item>
-      <title>Nginx</title>
-      <link>http://dianjiu.github.io/tags/nginx/</link>
+      <title>Nginx下载安装</title>
+      <link>http://dianjiu.github.io/post/nginx%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/</link>
       <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/nginx/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/nginx%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/</guid>
+      <description>一、简介 Nginx 是由俄罗斯人 Igor Sysoev 设计开发的，开发工作从2002 年开始，第一次公开发布在 2004 年 10 月 4 日。 官方网站为：http://nginx.org/</description>
     </item>
     
     <item>
-      <title>node</title>
-      <link>http://dianjiu.github.io/tags/node/</link>
+      <title>Nginx部署服务</title>
+      <link>http://dianjiu.github.io/post/nginx%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</link>
       <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/node/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/nginx%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</guid>
+      <description>一、查看配置 上一篇博客我们将 nginx 安装在 /usr/local/nginx 目录下，其默认的配置文件都放在这个目录的 conf 目录下，而主配置文件 nginx.conf 也在其中，后续部署应用时仅对 nginx 的配置文</description>
     </item>
     
     <item>
-      <title>npm</title>
-      <link>http://dianjiu.github.io/tags/npm/</link>
+      <title>使用Yarn代替NPM</title>
+      <link>http://dianjiu.github.io/post/yarn/</link>
       <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/npm/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/yarn/</guid>
+      <description>一、Yarn介绍 Yarn是由Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具 ，正如官方文档中写的，Yarn</description>
     </item>
     
     <item>
-      <title>Spring</title>
-      <link>http://dianjiu.github.io/tags/spring/</link>
-      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
+      <title>Gos Log支持自动清理临时文件</title>
+      <link>http://dianjiu.github.io/post/%E6%AF%8F%E6%AC%A1%E6%9F%A5%E8%AF%A2%E5%93%8D%E5%BA%94%E5%90%8E%E8%87%AA%E5%8A%A8%E6%B8%85%E7%90%86%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Mon, 21 Jun 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/spring/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/%E6%AF%8F%E6%AC%A1%E6%9F%A5%E8%AF%A2%E5%93%8D%E5%BA%94%E5%90%8E%E8%87%AA%E5%8A%A8%E6%B8%85%E7%90%86%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6/</guid>
+      <description>logc客户端清理 logc/controllers/file/file.go 压缩后清理原始文件 1 2 //压缩成功后 删除原文件 os.Remove(src) 返回后清理压缩文件 1 2 3 4 defer func() { //返回后清理压缩文件 os.Remove(file) }() logs服务端</description>
     </item>
     
     <item>
-      <title>SpringBoot</title>
-      <link>http://dianjiu.github.io/tags/springboot/</link>
-      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/springboot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SpringCloud</title>
-      <link>http://dianjiu.github.io/tags/springcloud/</link>
-      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/springcloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SpringCloud Alibaba</title>
-      <link>http://dianjiu.github.io/tags/springcloud-alibaba/</link>
-      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/springcloud-alibaba/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>yarn</title>
-      <link>http://dianjiu.github.io/tags/yarn/</link>
-      <pubDate>Tue, 20 Jul 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/yarn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>angular</title>
-      <link>http://dianjiu.github.io/tags/angular/</link>
+      <title>搭建内部的脚手架</title>
+      <link>http://dianjiu.github.io/post/cli/</link>
       <pubDate>Sun, 20 Jun 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/angular/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/cli/</guid>
+      <description>一、项目背景 ​ 公司不同项目组，使用不同的技术框架（vue or react）,即便是同一项目组不同开发人员由不同的开发习惯。最终会导致在项目结构混</description>
     </item>
     
     <item>
-      <title>cli</title>
-      <link>http://dianjiu.github.io/tags/cli/</link>
-      <pubDate>Sun, 20 Jun 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/cli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>react</title>
-      <link>http://dianjiu.github.io/tags/react/</link>
-      <pubDate>Sun, 20 Jun 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vue</title>
-      <link>http://dianjiu.github.io/tags/vue/</link>
-      <pubDate>Sun, 20 Jun 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/vue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>iterm2</title>
-      <link>http://dianjiu.github.io/tags/iterm2/</link>
+      <title>Mac终端美化</title>
+      <link>http://dianjiu.github.io/post/iterm2/</link>
       <pubDate>Thu, 03 Jun 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/iterm2/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/iterm2/</guid>
+      <description>iterm2+zsh+oh-my-zsh+powerlevel10k 一、下载iterm2 方式一：官网下载 https://iterm2.com/ 方式二：百度云下载 链接: https://pan.baidu.com/s/1ZZnTDbVcg4A2NAu0gmBZIg 密码:关注公众号 【点九先生】 回复：iterm2 即可获得 二、安装zsh mac</description>
     </item>
     
     <item>
-      <title>oh-my-zsh</title>
-      <link>http://dianjiu.github.io/tags/oh-my-zsh/</link>
-      <pubDate>Thu, 03 Jun 2021 11:34:52 +0800</pubDate>
+      <title>Gos Log V2.0.0</title>
+      <link>http://dianjiu.github.io/post/gos-log-v2/</link>
+      <pubDate>Thu, 20 May 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/oh-my-zsh/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/gos-log-v2/</guid>
+      <description>V2.0.0 1、上线Gos Log 官网 https://goslog.dianjiu.org.cn 2、优化并行查询速度，查询全部服务器理论耗时于单台服务相当 3、每次查询响应后自动清理临时文件，优化磁盘空间 4、优化向</description>
     </item>
     
     <item>
-      <title>powerlevel10k</title>
-      <link>http://dianjiu.github.io/tags/powerlevel10k/</link>
-      <pubDate>Thu, 03 Jun 2021 11:34:52 +0800</pubDate>
+      <title>Gos Log V1.0.0</title>
+      <link>http://dianjiu.github.io/post/gos-log-v1/</link>
+      <pubDate>Mon, 19 Apr 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/powerlevel10k/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/gos-log-v1/</guid>
+      <description>V1.0.0 1、基于bufio实现高性能的日志检索算法 2、基于beego实现服务端客户端分离设计 3、基于vue2.0实现服务端前后端分离设计 4、基于D</description>
     </item>
     
     <item>
-      <title>zsh</title>
-      <link>http://dianjiu.github.io/tags/zsh/</link>
-      <pubDate>Thu, 03 Jun 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/zsh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gos-tool</title>
-      <link>http://dianjiu.github.io/tags/gos-tool/</link>
+      <title>发行版本更新日志说明</title>
+      <link>http://dianjiu.github.io/post/%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%E8%AF%B4%E6%98%8E/</link>
       <pubDate>Wed, 10 Feb 2021 11:34:52 +0800</pubDate>
       
-      <guid>http://dianjiu.github.io/tags/gos-tool/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gos-ui</title>
-      <link>http://dianjiu.github.io/tags/gos-ui/</link>
-      <pubDate>Wed, 10 Feb 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/gos-ui/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>job-plus</title>
-      <link>http://dianjiu.github.io/tags/job-plus/</link>
-      <pubDate>Wed, 10 Feb 2021 11:34:52 +0800</pubDate>
-      
-      <guid>http://dianjiu.github.io/tags/job-plus/</guid>
-      <description></description>
+      <guid>http://dianjiu.github.io/post/%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%E8%AF%B4%E6%98%8E/</guid>
+      <description>0、版本号说明 点九先生所有项目，今后版本以年月日命名。Job Plus 从第一发行版开始即是XYZ格式。 0.1、版本格式 Vxx.yy.zz XX &amp;ndash; 表示大版本 YY &amp;ndash; 表示中版本</description>
     </item>
     
   </channel>
